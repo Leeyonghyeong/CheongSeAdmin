@@ -23,12 +23,6 @@
   <!-- Custom styles for this page -->
   <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
-  <style>
-    .input-group-text {
-      width: 100px;
-    }
-  </style>
-
 </head>
 
 <body id="page-top">
@@ -81,8 +75,8 @@
         </a>
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="utilities-color.html">점주 관리</a>
-            <a class="collapse-item" href="utilities-border.html">지점 추가 및 수정</a>
+            <a class="collapse-item" href="owner_table.html">점주 관리</a>
+            <a class="collapse-item" href="edit_owner.html">지점 추가</a>
           </div>
         </div>
       </li>
@@ -96,7 +90,7 @@
         </a>
         <div id="collapseVideo" class="collapse" aria-labelledby="headingVideo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="utilities-color.html">매장 CCTV영상</a>
+            <a class="collapse-item" href="cctv.html">매장 CCTV영상</a>
             <a class="collapse-item" href="muin_cctv.html">무인함 CCTV 영상</a>
           </div>
         </div>
@@ -234,130 +228,116 @@
         <div class="container-fluid">
 
           <!-- Page Heading -->
-          <h1 class="h3 mb-2 text-gray-800">고객 관리</h1>
+          <h1 class="h3 mb-2 text-gray-800">공지 사항</h1>
 
           <!-- DataTales Example -->
           <div class="card shadow mb-4">
-            <div class="card-header py-3">
-              <a href="user.html" class="font-weight-bold text-primary" style="margin-right: 20px; cursor: pointer;">고객
-                정보</a>
-              <a href="process.html" class="font-weight-bold text-primary"
-                style="margin-right: 20px; cursor: pointer; text-decoration: underline;">세탁 현황</a>
-              <a href="total.html" class="font-weight-bold text-primary" style="margin-right: 20px; cursor: pointer;">총
-                이용 현황</a>
+            <div class="card-header py-3" style="display: flex;">
+              <h6 class="m-0 font-weight-bold text-primary" style="flex: none;">공지 목록</h6>
+              <a href="noticeRegister.html" style="margin-left: auto;"><button type="button" class="btn btn-primary">공지
+                  등록</button></a>
             </div>
             <div class="card-body">
-
               <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
-                      <th>상태</th>
-                      <th>접수 지점</th>
-                      <th>출고 지점</th>
-                      <th>접수 날짜</th>
-                      <th>출고 날짜</th>
-                      <th>검수 영상</th>
+                      <th>번호</th>
+                      <th>제목</th>
+                      <th>작성일</th>
+                      <th>수정일</th>
                     </tr>
                   </thead>
                   <tfoot>
                     <tr>
-                      <th>상태</th>
-                      <th>접수 지점</th>
-                      <th>출고 지점</th>
-                      <th>접수 날짜</th>
-                      <th>출고 날짜</th>
-                      <th>검수 영상</th>
+                      <th>번호</th>
+                      <th>제목</th>
+                      <th>작성일</th>
+                      <th>수정일</th>
                     </tr>
                   </tfoot>
                   <tbody>
                     <tr>
-                      <td>세탁중</td>
-                      <td>전주점</td>
-                      <td></td>
-                      <td>2021/07/01</td>
-                      <td></td>
-                      <td><button type="button" class="btn btn-success"><a href="check_video.html"
-                            style="text-decoration: none;">확인</a></button></td>
+                      <td>2</td>
+                      <td><a href="noticeDetail.html">각 지점별 이벤트 안내</a></td>
+                      <td>2021/08/01</td>
+                      <td>2021/08/06</td>
                     </tr>
                     <tr>
-                      <td>출고 완료</td>
-                      <td>전주점</td>
-                      <td>전주점</td>
-                      <td>2021/07/01</td>
-                      <td>2021/07/03</td>
-                      <td><button type="button" class="btn btn-success"><a href="check_video.html"
-                            style="text-decoration: none;">확인</a></button></td>
+                      <td>1</td>
+                      <td><a href="noticeDetail.html">세탁소 운영 방침</a></td>
+                      <td>2021/08/01</td>
+                      <td></td>
                     </tr>
                   </tbody>
                 </table>
-
               </div>
             </div>
-
           </div>
-          <!-- /.container-fluid -->
 
         </div>
-        <!-- End of Main Content -->
-
-        <!-- Footer -->
-        <footer class="sticky-footer bg-white">
-          <div class="container my-auto">
-            <div class="copyright text-center my-auto">
-              <span>Copyright &copy; Your Website 2020</span>
-            </div>
-          </div>
-        </footer>
-        <!-- End of Footer -->
+        <!-- /.container-fluid -->
 
       </div>
-      <!-- End of Content Wrapper -->
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Copyright &copy; Your Website 2020</span>
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
 
     </div>
-    <!-- End of Page Wrapper -->
+    <!-- End of Content Wrapper -->
 
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-      <i class="fas fa-angle-up"></i>
-    </a>
+  </div>
+  <!-- End of Page Wrapper -->
 
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-      aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">×</span>
-            </button>
-          </div>
-          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-          <div class="modal-footer">
-            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-primary" href="login.html">Logout</a>
-          </div>
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Logout Modal-->
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <a class="btn btn-primary" href="login.html">Logout</a>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
 
-    <!-- Page level plugins -->
-    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
-    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+  <!-- Page level plugins -->
+  <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
-    <!-- Page level custom scripts -->
-    <script src="js/demo/datatables-demo.js"></script>
+  <!-- Page level custom scripts -->
+  <script src="js/demo/datatables-demo.js"></script>
 
 </body>
 

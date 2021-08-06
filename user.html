@@ -111,16 +111,25 @@
 
       <!-- Nav Item - Tables -->
       <li class="nav-item">
-        <a class="nav-link" href="charts.html">
+        <a class="nav-link" href="notice.html">
           <i class="fas fa-fw fa-chart-area"></i>
           <span>공지 사항</span></a>
       </li>
 
       <!-- Nav Item - Tables -->
       <li class="nav-item">
-        <a class="nav-link" href="charts.html">
-          <i class="fas fa-fw fa-chart-area"></i>
-          <span>설정</span></a>
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseConfig" aria-expanded="true"
+          aria-controls="collapseConfig">
+          <i class="fas fa-fw fa-wrench"></i>
+          <span>설정</span>
+        </a>
+        <div id="collapseConfig" class="collapse" aria-labelledby="headingConfig" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="rundryItem.html">세탁 품목 설정</a>
+            <a class="collapse-item" href="ratio.html">비율 설정</a>
+            <a class="collapse-item" href="event.html">이벤트 설정</a>
+          </div>
+        </div>
       </li>
 
       <!-- Divider -->
@@ -294,7 +303,8 @@
               </div>
 
               <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <button class="btn btn-primary me-md-2" id="userModify" type="button" style="margin-right: 10px">수정</button>
+                <button class="btn btn-primary me-md-2" id="userModify" type="button"
+                  style="margin-right: 10px">수정</button>
                 <button class="btn btn-danger" id="resetPassword" type="button">비밀번호 초기화</button>
               </div>
 
@@ -362,7 +372,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body" id="modalText">
-          
+
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary modalButton" data-bs-dismiss="modal">취소</button>
@@ -392,18 +402,18 @@
   <script>
     var myModal = new bootstrap.Modal(document.getElementById('exampleModal'));
 
-    document.querySelector("#userModify").addEventListener('click', function() {
+    document.querySelector("#userModify").addEventListener('click', function () {
       document.querySelector("#modalText").innerHTML = '수정 하시겠습니까?';
       myModal.show();
     })
 
-    document.querySelector("#resetPassword").addEventListener('click', function() {
+    document.querySelector("#resetPassword").addEventListener('click', function () {
       document.querySelector("#modalText").innerHTML = '비밀번호를 초기화 하시겠습니까?';
       myModal.show();
     })
 
     document.querySelectorAll(".modalButton").forEach(button => {
-      button.addEventListener('click', function() {
+      button.addEventListener('click', function () {
         myModal.hide();
       })
     });

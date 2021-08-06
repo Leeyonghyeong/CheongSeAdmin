@@ -25,7 +25,7 @@
 
   <style>
     .input-group-text {
-      width: 100px;
+      width: 150px;
     }
   </style>
 
@@ -81,8 +81,8 @@
         </a>
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="utilities-color.html">점주 관리</a>
-            <a class="collapse-item" href="utilities-border.html">지점 추가 및 수정</a>
+            <a class="collapse-item" href="owner_table.html">점주 관리</a>
+            <a class="collapse-item" href="edit_owner.html">지점 추가</a>
           </div>
         </div>
       </li>
@@ -96,7 +96,7 @@
         </a>
         <div id="collapseVideo" class="collapse" aria-labelledby="headingVideo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="utilities-color.html">매장 CCTV영상</a>
+            <a class="collapse-item" href="cctv.html">매장 CCTV영상</a>
             <a class="collapse-item" href="muin_cctv.html">무인함 CCTV 영상</a>
           </div>
         </div>
@@ -118,8 +118,8 @@
 
       <!-- Nav Item - Tables -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseConfig" aria-expanded="true"
-          aria-controls="collapseConfig">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseConfig"
+          aria-expanded="true" aria-controls="collapseConfig">
           <i class="fas fa-fw fa-wrench"></i>
           <span>설정</span>
         </a>
@@ -234,130 +234,138 @@
         <div class="container-fluid">
 
           <!-- Page Heading -->
-          <h1 class="h3 mb-2 text-gray-800">고객 관리</h1>
+          <h1 class="h3 mb-2 text-gray-800">공지 사항</h1>
 
           <!-- DataTales Example -->
           <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <a href="user.html" class="font-weight-bold text-primary" style="margin-right: 20px; cursor: pointer;">고객
-                정보</a>
-              <a href="process.html" class="font-weight-bold text-primary"
-                style="margin-right: 20px; cursor: pointer; text-decoration: underline;">세탁 현황</a>
-              <a href="total.html" class="font-weight-bold text-primary" style="margin-right: 20px; cursor: pointer;">총
-                이용 현황</a>
-            </div>
+              <h6 class="m-0 font-weight-bold text-primary">공지 보기</h6>
+          </div>
             <div class="card-body">
 
-              <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                  <thead>
-                    <tr>
-                      <th>상태</th>
-                      <th>접수 지점</th>
-                      <th>출고 지점</th>
-                      <th>접수 날짜</th>
-                      <th>출고 날짜</th>
-                      <th>검수 영상</th>
-                    </tr>
-                  </thead>
-                  <tfoot>
-                    <tr>
-                      <th>상태</th>
-                      <th>접수 지점</th>
-                      <th>출고 지점</th>
-                      <th>접수 날짜</th>
-                      <th>출고 날짜</th>
-                      <th>검수 영상</th>
-                    </tr>
-                  </tfoot>
-                  <tbody>
-                    <tr>
-                      <td>세탁중</td>
-                      <td>전주점</td>
-                      <td></td>
-                      <td>2021/07/01</td>
-                      <td></td>
-                      <td><button type="button" class="btn btn-success"><a href="check_video.html"
-                            style="text-decoration: none;">확인</a></button></td>
-                    </tr>
-                    <tr>
-                      <td>출고 완료</td>
-                      <td>전주점</td>
-                      <td>전주점</td>
-                      <td>2021/07/01</td>
-                      <td>2021/07/03</td>
-                      <td><button type="button" class="btn btn-success"><a href="check_video.html"
-                            style="text-decoration: none;">확인</a></button></td>
-                    </tr>
-                  </tbody>
-                </table>
-
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">제 목</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-default" placeholder="제목 입력...">
               </div>
-            </div>
 
+              <div class="mb-3">
+                <label for="validationTextarea" class="form-label">내 용</label>
+                <textarea class="form-control" id="validationTextarea" rows="20" placeholder="에디터 적용..."></textarea>
+              </div>
+
+              
+
+              <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button class="btn btn-primary me-md-2" type="button" id="userModify" style="margin-right: 10px">등록</button>
+                <button class="btn btn-danger" id="resetPassword" type="button">취소</button>
+              </div>
+
+            </div>
           </div>
-          <!-- /.container-fluid -->
 
         </div>
-        <!-- End of Main Content -->
-
-        <!-- Footer -->
-        <footer class="sticky-footer bg-white">
-          <div class="container my-auto">
-            <div class="copyright text-center my-auto">
-              <span>Copyright &copy; Your Website 2020</span>
-            </div>
-          </div>
-        </footer>
-        <!-- End of Footer -->
+        <!-- /.container-fluid -->
 
       </div>
-      <!-- End of Content Wrapper -->
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Copyright &copy; Your Website 2020</span>
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
 
     </div>
-    <!-- End of Page Wrapper -->
+    <!-- End of Content Wrapper -->
 
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-      <i class="fas fa-angle-up"></i>
-    </a>
+  </div>
+  <!-- End of Page Wrapper -->
 
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-      aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">×</span>
-            </button>
-          </div>
-          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-          <div class="modal-footer">
-            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-primary" href="login.html">Logout</a>
-          </div>
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Logout Modal-->
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <a class="btn btn-primary" href="login.html">Logout</a>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">알림창</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="modalText">
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary modalButton" data-bs-dismiss="modal">취소</button>
+          <button type="button" class="btn btn-primary modalButton">확인</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    <!-- Page level plugins -->
-    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
-    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
 
-    <!-- Page level custom scripts -->
-    <script src="js/demo/datatables-demo.js"></script>
+  <!-- Page level plugins -->
+  <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="js/demo/datatables-demo.js"></script>
+
+  <script>
+    var myModal = new bootstrap.Modal(document.getElementById('exampleModal'));
+
+    document.querySelector("#userModify").addEventListener('click', function() {
+      document.querySelector("#modalText").innerHTML = '등록 하시겠습니까?';
+      myModal.show();
+    })
+
+    document.querySelector("#resetPassword").addEventListener('click', function() {
+      document.querySelector("#modalText").innerHTML = '취소하시면 작성한 글이 저장되지 않습니다.<br />취소 하시겠습니까?';
+      myModal.show();
+    })
+
+    document.querySelectorAll(".modalButton").forEach(button => {
+      button.addEventListener('click', function() {
+        myModal.hide();
+      })
+    });
+  </script>
 
 </body>
 

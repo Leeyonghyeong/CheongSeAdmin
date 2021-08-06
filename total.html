@@ -111,16 +111,25 @@
 
       <!-- Nav Item - Tables -->
       <li class="nav-item">
-        <a class="nav-link" href="charts.html">
+        <a class="nav-link" href="notice.html">
           <i class="fas fa-fw fa-chart-area"></i>
           <span>공지 사항</span></a>
       </li>
 
       <!-- Nav Item - Tables -->
       <li class="nav-item">
-        <a class="nav-link" href="charts.html">
-          <i class="fas fa-fw fa-chart-area"></i>
-          <span>설정</span></a>
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseConfig" aria-expanded="true"
+          aria-controls="collapseConfig">
+          <i class="fas fa-fw fa-wrench"></i>
+          <span>설정</span>
+        </a>
+        <div id="collapseConfig" class="collapse" aria-labelledby="headingConfig" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="rundryItem.html">세탁 품목 설정</a>
+            <a class="collapse-item" href="ratio.html">비율 설정</a>
+            <a class="collapse-item" href="event.html">이벤트 설정</a>
+          </div>
+        </div>
       </li>
 
       <!-- Divider -->
@@ -248,7 +257,7 @@
                 <!-- Project Card Example -->
                 <div class="card shadow mb-4">
                   <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">매장별 매출 현황</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">매장별 이용 현황</h6>
                   </div>
                   <div class="card-body">
                     <h4 class="small font-weight-bold">강남점 <span class="float-right">20</span></h4>
@@ -286,7 +295,7 @@
                   <div class="card shadow mb-4">
                     <!-- Card Header - Dropdown -->
                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                      <h6 class="m-0 font-weight-bold text-primary">입.출고 현황</h6>
+                      <h6 class="m-0 font-weight-bold text-primary">품목별 현황</h6>
                       <div class="dropdown no-arrow">
                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
                           aria-haspopup="true" aria-expanded="false">
@@ -309,13 +318,13 @@
                       </div>
                       <div class="mt-4 text-center small">
                         <span class="mr-2">
-                          <i class="fas fa-circle text-primary"></i> 입고
+                          <i class="fas fa-circle text-primary"></i> 바지
                         </span>
                         <span class="mr-2">
-                          <i class="fas fa-circle text-success"></i> 출고
+                          <i class="fas fa-circle text-success"></i> 셔츠
                         </span>
                         <span class="mr-2">
-                          <i class="fas fa-circle text-info"></i> 취소
+                          <i class="fas fa-circle text-info"></i> 치마
                         </span>
                       </div>
                     </div>
@@ -394,7 +403,7 @@
   <!-- Page level custom scripts -->
   <script src="vendor/chart.js/Chart.min.js"></script>
   <script src="js/demo/datatables-demo.js"></script>
-  <script src="js/demo/chart-pie-demo.js"></script>
+  <script src="js/demo/chart-pie-demo2.js"></script>
 
 </body>
 
