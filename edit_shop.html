@@ -151,6 +151,7 @@
       </li>
 
 
+
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
 
@@ -253,34 +254,60 @@
         <div class="container-fluid">
 
           <!-- Page Heading -->
-          <h1 class="h3 mb-2 text-gray-800">세탁 품목 등록</h1>
+          <h1 class="h3 mb-2 text-gray-800">지점 추가</h1>
 
           <!-- DataTales Example -->
           <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">품목 등록</h6>
-          </div>
+
+            </div>
             <div class="card-body">
 
               <div class="input-group mb-3">
-                <span class="input-group-text" id="inputGroup-sizing-default">품 목 명</span>
+                <span class="input-group-text" id="inputGroup-sizing-default">매장명</span>
                 <input type="text" class="form-control" aria-label="Sizing example input"
-                  aria-describedby="inputGroup-sizing-default" placeholder="품목명 입력">
+                  aria-describedby="inputGroup-sizing-default">
               </div>
 
               <div class="input-group mb-3">
-                <span class="input-group-text" id="inputGroup-sizing-default">가 격</span>
+                <span class="input-group-text" id="inputGroup-sizing-default">대표자</span>
                 <input type="text" class="form-control" aria-label="Sizing example input"
-                  aria-describedby="inputGroup-sizing-default" placeholder="가격 입력">
+                  aria-describedby="inputGroup-sizing-default">
               </div>
 
-              
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">연락처</span>
+                <input type="password" class="form-control" aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-default">
+              </div>
+
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">사업자번호</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-default">
+              </div>
+
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">매장주소</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-default">
+              </div>
+
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">지점 ID</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-default">
+              </div>
+
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">비밀번호</span>
+                <input type="password" class="form-control" aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-default">
+              </div>
 
               <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <button class="btn btn-primary me-md-2" type="button" id="userModify" style="margin-right: 10px">등록</button>
-                <button class="btn btn-danger" id="resetPassword" type="button">취소</button>
+                <button class="btn btn-primary me-md-2" type="button" style="margin-right: 10px">등록</button>
               </div>
-
             </div>
           </div>
 
@@ -331,25 +358,6 @@
     </div>
   </div>
 
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">알림창</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body" id="modalText">
-          
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary modalButton" data-bs-dismiss="modal">취소</button>
-          <button type="button" class="btn btn-primary modalButton">확인</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -366,26 +374,6 @@
 
   <!-- Page level custom scripts -->
   <script src="js/demo/datatables-demo.js"></script>
-
-  <script>
-    var myModal = new bootstrap.Modal(document.getElementById('exampleModal'));
-
-    document.querySelector("#userModify").addEventListener('click', function() {
-      document.querySelector("#modalText").innerHTML = '등록 하시겠습니까?';
-      myModal.show();
-    })
-
-    document.querySelector("#resetPassword").addEventListener('click', function() {
-      document.querySelector("#modalText").innerHTML = '취소하시면 작성한 글이 저장되지 않습니다.<br />취소 하시겠습니까?';
-      myModal.show();
-    })
-
-    document.querySelectorAll(".modalButton").forEach(button => {
-      button.addEventListener('click', function() {
-        myModal.hide();
-      })
-    });
-  </script>
 
 </body>
 

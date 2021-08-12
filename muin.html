@@ -253,32 +253,74 @@
         <div class="container-fluid">
 
           <!-- Page Heading -->
-          <h1 class="h3 mb-2 text-gray-800">세탁 품목 등록</h1>
+          <h1 class="h3 mb-2 text-gray-800">지점 관리</h1>
 
           <!-- DataTales Example -->
           <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">품목 등록</h6>
-          </div>
+              <a href="muin.html" class="font-weight-bold text-primary"
+                style="margin-right: 20px; cursor: pointer; text-decoration: underline;">무인점 정보</a>
+              <a href="muin_sales.html" class="font-weight-bold text-primary" style="margin-right: 20px; cursor: pointer;">매출
+                현황</a>
+            </div>
             <div class="card-body">
 
               <div class="input-group mb-3">
-                <span class="input-group-text" id="inputGroup-sizing-default">품 목 명</span>
-                <input type="text" class="form-control" aria-label="Sizing example input"
-                  aria-describedby="inputGroup-sizing-default" placeholder="품목명 입력">
+                <span class="input-group-text" id="inputGroup-sizing-default">지 점<font color="red"><small>(필수)</small></font></span>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>전주 에코점</option>
+                  <option value="1">전주 에코점</option>
+                  <option value="2">송파점</option>
+                  <option value="3">강남점</option>
+                </select>
               </div>
 
               <div class="input-group mb-3">
-                <span class="input-group-text" id="inputGroup-sizing-default">가 격</span>
+                <span class="input-group-text" id="inputGroup-sizing-default">매장명</span>
                 <input type="text" class="form-control" aria-label="Sizing example input"
-                  aria-describedby="inputGroup-sizing-default" placeholder="가격 입력">
+                  aria-describedby="inputGroup-sizing-default" value="에코 무인1">
               </div>
 
-              
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">대표자</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-default" value="청세">
+              </div>
+
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">연락처</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-default" value="010-1234-1234">
+              </div>
+
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">사업자번호</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-default" value="123-123-123">
+              </div>
+
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">매장주소</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-default" value="전주 에코시티 에코시티로123번길">
+              </div>
+
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">지점 ID</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-default" value="cheongse">
+              </div>
+
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">비밀번호</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-default" value="1234">
+              </div>
 
               <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <button class="btn btn-primary me-md-2" type="button" id="userModify" style="margin-right: 10px">등록</button>
-                <button class="btn btn-danger" id="resetPassword" type="button">취소</button>
+                <button class="btn btn-primary me-md-2" type="button" id="userModify"
+                  style="margin-right: 10px">수정</button>
+                <button class="btn btn-danger" id="resetPassword" type="button">비밀번호 초기화</button>
               </div>
 
             </div>
@@ -340,7 +382,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body" id="modalText">
-          
+
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary modalButton" data-bs-dismiss="modal">취소</button>
@@ -370,18 +412,18 @@
   <script>
     var myModal = new bootstrap.Modal(document.getElementById('exampleModal'));
 
-    document.querySelector("#userModify").addEventListener('click', function() {
-      document.querySelector("#modalText").innerHTML = '등록 하시겠습니까?';
+    document.querySelector("#userModify").addEventListener('click', function () {
+      document.querySelector("#modalText").innerHTML = '수정 하시겠습니까?';
       myModal.show();
     })
 
-    document.querySelector("#resetPassword").addEventListener('click', function() {
-      document.querySelector("#modalText").innerHTML = '취소하시면 작성한 글이 저장되지 않습니다.<br />취소 하시겠습니까?';
+    document.querySelector("#resetPassword").addEventListener('click', function () {
+      document.querySelector("#modalText").innerHTML = '비밀번호를 초기화 하시겠습니까?';
       myModal.show();
     })
 
     document.querySelectorAll(".modalButton").forEach(button => {
-      button.addEventListener('click', function() {
+      button.addEventListener('click', function () {
         myModal.hide();
       })
     });
